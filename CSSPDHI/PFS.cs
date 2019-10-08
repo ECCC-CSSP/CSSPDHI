@@ -132,7 +132,7 @@ namespace CSSPDHI
             }
             try
             {
-                FileInfo fileInfo = new FileInfo(pfsKeyword.GetParameter(ParameterIndex).ToFileNamePath());
+                FileInfo fileInfo = new FileInfo(pfsKeyword.GetParameter(ParameterIndex).ToFileName());
 
                 pfsFile.Close();
 
