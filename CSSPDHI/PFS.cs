@@ -146,6 +146,30 @@ namespace CSSPDHI
                 return null;
             }
         }
+        public FileInfo GetVariableFileInfoResult(string Path, string Keyword, int ParameterIndex)
+        {
+            PFSFile pfsFile = null;
+            PFSKeyword pfsKeyword = null;
+            if (!CheckAll(Path, Keyword, out pfsFile, out pfsKeyword))
+            {
+                return null;
+            }
+            try
+            {
+                FileInfo fileInfo = new FileInfo(pfsKeyword.GetParameter(ParameterIndex).ToResultFileName());
+
+                pfsFile.Close();
+
+                return fileInfo;
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = string.Format(CSSPDHIRes.ParameterIndex_DoesNotExistForSectionPath_AndKeyword_Error_, ParameterIndex, Path, Keyword, ex.Message + (ex.InnerException != null ? " Inner: " + ex.InnerException.Message : ""));
+                OnCSSPDHIChanged(new CSSPDHIEventArgs(new CSSPDHIMessage("Error", -1, false, ErrorMessage)));
+                pfsFile.Close();
+                return null;
+            }
+        }
         public string GetVariableString(string Path, string Keyword, int ParameterIndex)
         {
             PFSFile pfsFile = null;
