@@ -34,25 +34,26 @@
     <Reference Include="CSSPModelsDLL">
       <HintPath>..\..\CSSPModelsDLL\CSSPModelsDLL\bin\Debug\CSSPModelsDLL.dll</HintPath>
     </Reference>
-    <Reference Include="DHI.DHIfl, Version=15.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\DHI\2016\MIKE SDK\bin\DHI.DHIfl.dll</HintPath>
+    <Reference Include="DHI.DHIfl">
+      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.DHIfl.dll</HintPath>
     </Reference>
-    <Reference Include="DHI.Generic.MikeZero.DFS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\DHI\2016\MIKE SDK\bin\DHI.Generic.MikeZero.DFS.dll</HintPath>
+    <Reference Include="DHI.Generic.MikeZero.DFS">
+      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.Generic.MikeZero.DFS.dll</HintPath>
     </Reference>
-    <Reference Include="DHI.Generic.MikeZero.EUM, Version=15.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
+    <Reference Include="DHI.Generic.MikeZero.EUM">
+      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.Generic.MikeZero.EUM.dll</HintPath>
+    </Reference>
+    <Reference Include="DHI.Mike.Install, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\DHI\2016\MIKE SDK\bin\DHI.Generic.MikeZero.EUM.dll</HintPath>
+      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.Mike.Install.dll</HintPath>
     </Reference>
     <Reference Include="DHI.PFS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\DHI\2016\MIKE SDK\bin\DHI.PFS.dll</HintPath>
+      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.PFS.dll</HintPath>
     </Reference>
     <Reference Include="DHI.Projections, Version=15.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\DHI\2016\MIKE SDK\bin\DHI.Projections.dll</HintPath>
+      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.Projections.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
