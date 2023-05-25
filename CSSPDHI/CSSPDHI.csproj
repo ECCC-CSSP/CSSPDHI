@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CSSPDHI</RootNamespace>
     <AssemblyName>CSSPDHI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSSPModelsDLL">
-      <HintPath>..\..\CSSPModelsDLL\CSSPModelsDLL\bin\Debug\CSSPModelsDLL.dll</HintPath>
-    </Reference>
     <Reference Include="DHI.DHIfl">
       <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.DHIfl.dll</HintPath>
     </Reference>
@@ -99,6 +96,12 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CSSPDHIRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CSSPModelsDLL\CSSPModelsDLL\CSSPModelsDLL.csproj">
+      <Project>{eb211f77-4987-405d-ad8f-53882f261c33}</Project>
+      <Name>CSSPModelsDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
