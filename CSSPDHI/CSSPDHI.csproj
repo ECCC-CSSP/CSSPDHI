@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,31 +31,15 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DHI.DHIfl">
-      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.DHIfl.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Generic.MikeZero.DFS">
-      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.Generic.MikeZero.DFS.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Generic.MikeZero.EUM">
-      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.Generic.MikeZero.EUM.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Mike.Install, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.Mike.Install.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.PFS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.PFS.dll</HintPath>
-    </Reference>
-    <Reference Include="DHI.Projections, Version=15.0.0.0, Culture=neutral, PublicKeyToken=c513450b5d0bf0bf, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\DHI\2020\MIKE SDK\bin\DHI.Projections.dll</HintPath>
+    <Reference Include="CSSPModelsDLL">
+      <HintPath>..\..\CSSPDBDLL\CSSPDBDLL\bin\Release\CSSPModelsDLL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -98,10 +84,21 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CSSPModelsDLL\CSSPModelsDLL\CSSPModelsDLL.csproj">
-      <Project>{eb211f77-4987-405d-ad8f-53882f261c33}</Project>
-      <Name>CSSPModelsDLL</Name>
-    </ProjectReference>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DHI.corlib">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="DHI.Mike1D.Generic">
+      <Version>23.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="NetTopologySuite">
+      <Version>2.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.6.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
