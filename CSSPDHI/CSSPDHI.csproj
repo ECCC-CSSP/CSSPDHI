@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseEpisteme|AnyCPU'">
+    <OutputPath>bin\ReleaseEpisteme\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>preview</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSSPModelsDLL">
       <HintPath>..\..\CSSPDBDLL\CSSPDBDLL\bin\Release\CSSPModelsDLL.dll</HintPath>
